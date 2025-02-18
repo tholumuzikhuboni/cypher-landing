@@ -1,5 +1,5 @@
 
-import { Mail, MapPin, Phone } from 'lucide-react';
+import { Mail, MapPin, Phone, Shield } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -7,7 +7,10 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-primary">CipherGenix</h3>
+            <div className="flex items-center">
+              <Shield className="w-6 h-6 text-primary mr-2" />
+              <h3 className="text-lg font-semibold text-primary">CipherGenix</h3>
+            </div>
             <p className="text-gray-600 text-sm">
               Securing the future of AI through innovative solutions and cutting-edge technology.
             </p>

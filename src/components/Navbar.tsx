@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Shield } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,10 +23,11 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/80 backdrop-blur-md shadow-sm' : ''}`}>
+    <nav className={`fixed w-full z-50 transition-all duration-300 bg-white/80 backdrop-blur-md shadow-md ${isScrolled ? 'shadow-lg' : ''}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0 flex items-center">
+            <Shield className="w-6 h-6 text-primary mr-2" />
             <span className="text-xl font-semibold text-primary">CipherGenix</span>
           </div>
           

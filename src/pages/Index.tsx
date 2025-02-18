@@ -1,6 +1,5 @@
-
 import { useEffect } from 'react';
-import { Shield, Brain, Globe, Users, ArrowRight, Lock, Zap, Target } from 'lucide-react';
+import { Shield, Brain, Globe, Users, ArrowRight, Lock, Zap, Target, Play, Handshake } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import ChatBot from '../components/ChatBot';
@@ -92,6 +91,103 @@ const Index = () => {
                     <h3 className="text-2xl font-semibold mb-4">{feature.title}</h3>
                     <p className="text-gray-600">{feature.description}</p>
                   </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Partner With Us Section */}
+      <section className="section-padding bg-gradient-to-b from-white to-secondary/20">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16 fade-in">
+            <h2 className="text-4xl font-bold mb-6 animate-text bg-gradient-to-r from-primary via-purple-600 to-primary bg-[200%_auto] bg-clip-text text-transparent">
+              Partner With Us
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Join forces with CipherGenix to shape the future of AI security. Together, we can build a safer digital world.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="fade-in">
+              <div className="glass-card p-8 rounded-xl space-y-6">
+                <Handshake className="w-12 h-12 text-primary mb-4" />
+                <h3 className="text-2xl font-semibold mb-4">Strategic Partnership</h3>
+                <ul className="space-y-4">
+                  {[
+                    "Access to cutting-edge AI security solutions",
+                    "Joint research and development opportunities",
+                    "Exclusive technology previews",
+                    "Customized security implementations"
+                  ].map((benefit, index) => (
+                    <li key={index} className="flex items-center space-x-3">
+                      <Shield className="w-5 h-5 text-primary flex-shrink-0" />
+                      <span className="text-gray-700">{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
+                <button className="button-primary mt-6">
+                  Become a Partner
+                </button>
+              </div>
+            </div>
+            <div className="fade-in">
+              <div className="aspect-square rounded-2xl bg-gradient-to-br from-primary/20 via-purple-300/20 to-primary/20 animate-float relative overflow-hidden">
+                <div className="absolute inset-0 backdrop-blur-sm" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Explore Our Demo Section */}
+      <section className="section-padding bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16 fade-in">
+            <h2 className="text-4xl font-bold mb-6 animate-text bg-gradient-to-r from-primary via-purple-600 to-primary bg-[200%_auto] bg-clip-text text-transparent">
+              Explore Our Demo
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Experience the power of our AI security solutions firsthand with our interactive demo.
+            </p>
+          </div>
+
+          <div className="fade-in">
+            <div className="relative aspect-video rounded-xl overflow-hidden glass-card group cursor-pointer">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-purple-600/20 group-hover:opacity-75 transition-opacity duration-300" />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="bg-white/90 rounded-full p-4 shadow-lg transform group-hover:scale-110 transition-transform duration-300">
+                  <Play className="w-12 h-12 text-primary" />
+                </div>
+              </div>
+              <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/50 to-transparent">
+                <h3 className="text-white text-2xl font-semibold mb-2">Interactive Demo</h3>
+                <p className="text-white/90">See our AI security platform in action</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-12 grid md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Live Protection",
+                description: "Watch real-time threat detection and response"
+              },
+              {
+                title: "Security Dashboard",
+                description: "Explore our intuitive security monitoring interface"
+              },
+              {
+                title: "Threat Analysis",
+                description: "See how we identify and neutralize AI threats"
+              }
+            ].map((feature, index) => (
+              <div key={index} className="fade-in">
+                <div className="solution-card">
+                  <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
+                  <p className="text-gray-600">{feature.description}</p>
                 </div>
               </div>
             ))}
