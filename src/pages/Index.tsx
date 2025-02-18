@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { Shield, Brain, Globe, Users, ArrowRight, Lock, Zap, Target, Play, Handshake } from 'lucide-react';
-import Navbar from './components/Navbar';
+import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import ChatBot from '../components/ChatBot';
 
