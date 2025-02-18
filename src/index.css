@@ -26,7 +26,7 @@
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
     --ring: 262 47% 55%;
-    --radius: 0.5rem;
+    --radius: 0.75rem;
   }
 
   * {
@@ -38,32 +38,78 @@
   }
 
   .glass-card {
-    @apply backdrop-blur-md bg-white/30 border border-white/20 shadow-lg;
+    @apply backdrop-blur-xl bg-white/40 border border-white/30 shadow-lg hover:shadow-xl transition-all duration-300;
   }
 
   .section-padding {
-    @apply py-20 px-4 md:px-6 lg:px-8;
+    @apply py-24 px-4 md:px-8 lg:px-12;
   }
 
   .fade-in {
-    @apply opacity-0 translate-y-4 transition-all duration-700 ease-out;
+    @apply opacity-0 translate-y-8 transition-all duration-1000 ease-out;
   }
 
   .fade-in.appear {
     @apply opacity-100 translate-y-0;
   }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-purple-600 to-primary;
+  }
+
+  .hover-scale {
+    @apply transition-transform duration-300 hover:scale-105;
+  }
+
+  .button-primary {
+    @apply px-6 py-3 text-white bg-primary rounded-lg hover:bg-primary/90 
+           transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5
+           focus:outline-none focus:ring-2 focus:ring-primary/50;
+  }
+
+  .input-primary {
+    @apply w-full px-4 py-3 border rounded-lg bg-white/50 backdrop-blur-sm
+           focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all duration-200;
+  }
 }
 
-/* Custom animations */
+/* Enhanced animations */
 @keyframes float {
   0%, 100% {
-    transform: translateY(0);
+    transform: translateY(0) rotate(0);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-20px) rotate(2deg);
   }
 }
 
 .animate-float {
-  animation: float 6s ease-in-out infinite;
+  animation: float 8s ease-in-out infinite;
+}
+
+@keyframes pulse-subtle {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s ease-in-out infinite;
+}
+
+/* Enhanced card hover effects */
+.solution-card {
+  @apply p-6 rounded-xl border bg-white/50 backdrop-blur-sm
+         transition-all duration-300 hover:shadow-xl hover:-translate-y-1
+         hover:border-primary/20;
+}
+
+/* Enhanced button hover effects */
+.apply-button {
+  @apply inline-flex items-center text-primary hover:text-white
+         px-4 py-2 rounded-lg border border-primary
+         hover:bg-primary transition-all duration-300;
 }
